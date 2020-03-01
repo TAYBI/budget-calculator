@@ -1,5 +1,6 @@
-# budget_calculator
+# Budget Calculator
 
 ## TODO
 - [x] Create Ui
-- [ ] Add functionality 
+- [x] Add functionality 
+- [x] local storage

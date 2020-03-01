@@ -1,7 +1,11 @@
 import React from "react";
 import { MdDelete, MdEdit } from "react-icons/md";
 
-export const Item = ({ expense: { id, charge, amount } }) => {
+export const Item = ({
+  expense: { id, charge, amount },
+  handleEdit,
+  handleDelete
+}) => {
   return (
     <li className="item">
       <div className="info">
@@ -9,10 +13,10 @@ export const Item = ({ expense: { id, charge, amount } }) => {
         <span className="amount">${amount}</span>
       </div>
       <div>
-        <button className="edit-btn">
+        <button className="edit-btn" onClick={() => handleEdit(id)}>
           <MdEdit />
         </button>
-        <button className="clear-btn">
+        <button className="clear-btn" onClick={() => handleDelete(id)}>
           <MdDelete />
         </button>
       </div>
